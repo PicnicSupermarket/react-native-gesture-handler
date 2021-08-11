@@ -26,7 +26,7 @@ class RNGestureHandlerEnabledRootView : ReactRootView {
       }
     } catch (e: IllegalArgumentException) {}
 
-    return super.dispatchTouchEvent(ev)
+    return false
   }
 
   /**
