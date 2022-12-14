@@ -1,6 +1,6 @@
 {
-  "name": "react-native-gesture-handler",
-  "version": "2.2.0-picnic.1.john.1",
+  "name": "@test/react-native-gesture-handler",
+  "version": "2.2.0-picnic.1.john.3",
   "description": "Experimental implementation of a new declarative API for gesture handling in react-native",
   "scripts": {
     "prepare": "bob build",
@@ -110,6 +110,9 @@
         "# check if version corresponds to changes in native files  \n if git diff --name-only ${latestVersion} HEAD | egrep \"(android/.*)|(ios/.*)\" -q; then egrep '\\.0$' -q <<< ${version}; else test $? -eq 1; fi"
       ]
     }
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873"
   },
   "react-native-builder-bob": {
     "source": "src",
