@@ -47,6 +47,7 @@ class RNGestureHandlerRootHelper(private val context: ReactContext, wrappedView:
       ReactConstants.TAG,
       "[GESTURE HANDLER] Tearing down gesture handler registered for root view $rootView")
     val module = context.getNativeModule(RNGestureHandlerModule::class.java)!!
+    rootView = null
     with(module) {
       registry.dropHandler(jsGestureHandler!!.tag)
       unregisterRootHelper(this@RNGestureHandlerRootHelper)
