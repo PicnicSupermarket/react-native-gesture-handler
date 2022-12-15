@@ -16,7 +16,7 @@ import com.swmansion.gesturehandler.GestureHandlerOrchestrator
 class RNGestureHandlerRootHelper(private val context: ReactContext, wrappedView: ViewGroup) {
   private val orchestrator: GestureHandlerOrchestrator?
   private val jsGestureHandler: GestureHandler<*>?
-  val rootView: ViewGroup
+  val rootView: ViewGroup?
   private var shouldIntercept = false
   private var passingTouch = false
 
@@ -73,7 +73,7 @@ class RNGestureHandlerRootHelper(private val context: ReactContext, wrappedView:
         action = MotionEvent.ACTION_CANCEL
       }
       if (rootView is RootView) {
-        rootView.onChildStartedNativeGesture(event)
+        rootView?.onChildStartedNativeGesture(event)
       }
     }
   }
