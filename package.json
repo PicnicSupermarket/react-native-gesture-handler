@@ -1,5 +1,5 @@
 {
-  "name": "@test/react-native-gesture-handler",
+  "name": "react-native-gesture-handler",
   "version": "2.2.0-picnic.1.john.3",
   "description": "Experimental implementation of a new declarative API for gesture handling in react-native",
   "scripts": {
@@ -112,7 +112,7 @@
     }
   },
   "publishConfig": {
-    "registry": "http://localhost:4873"
+    "registry": "http://localhost:3784"
   },
   "react-native-builder-bob": {
     "source": "src",
