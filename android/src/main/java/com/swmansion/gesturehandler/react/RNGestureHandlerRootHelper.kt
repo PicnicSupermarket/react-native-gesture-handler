@@ -16,7 +16,7 @@ import com.swmansion.gesturehandler.GestureHandlerOrchestrator
 class RNGestureHandlerRootHelper(private val context: ReactContext, wrappedView: ViewGroup) {
   private val orchestrator: GestureHandlerOrchestrator?
   private val jsGestureHandler: GestureHandler<*>?
-  val rootView: ViewGroup?
+  var rootView: ViewGroup?
   private var shouldIntercept = false
   private var passingTouch = false
 
