@@ -508,7 +508,8 @@ class RNGestureHandlerModule(reactContext: ReactApplicationContext?)
     }
     synchronized(roots) {
       return roots.firstOrNull {
-        it.rootView is ReactRootView && it.rootView.rootViewTag == rootViewTag
+        val rootView = it.rootView as? ReactRootView
+        rootView?.rootViewTag == rootViewTag
       }
     }
   }
