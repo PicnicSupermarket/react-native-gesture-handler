@@ -72,9 +72,7 @@ class RNGestureHandlerRootHelper(private val context: ReactContext, wrappedView:
       val event = MotionEvent.obtain(time, time, MotionEvent.ACTION_CANCEL, 0f, 0f, 0).apply {
         action = MotionEvent.ACTION_CANCEL
       }
-      if (rootView is RootView) {
-        rootView?.onChildStartedNativeGesture(event)
-      }
+      (rootView as? RootView)?.let { it.onChildStartedNativeGesture(event) }
     }
   }
 
